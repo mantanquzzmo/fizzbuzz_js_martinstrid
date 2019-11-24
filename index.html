@@ -5,9 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Fizz Buzz</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
+</head>
     </head>
-    <script src="js/fizzbuzz.js"></script>
+    <body>
+        <div class="ui hidden divider"></div>
+        <div class="ui form" align="center">
+            <div class="ui raised very padded text container segment">
+            <h1>FizzBuzz!</h1>
+            <h2>Let's play!</h3>
+            
 
+            <div class="ui center aligned basic segment">
+            <input type="text" id="value" placeholder="Enter a number!" width: 40%;>
+            <div class="ui hidden divider"></div>
+            <input type="submit" value="Fizz it!" id="button" class="ui teal button">
+            </div>
+            
+            <div id="display_answer">
+                
+            
+            </div>
+        </div>
+
+    </body>
+    <script src="src/js/fizzbuzz.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             let button = document.getElementById('button')
@@ -16,18 +38,24 @@
                 let value = document.getElementById('value').value
                 let fizzBuzz = new FizzBuzz
                 let result = fizzBuzz.check(value)
-                displayDiv.innerHTML = result;
+                let resultPicFunc = (answer) => {
+                    if (answer == 'FizzBuzz') {
+                        return "https://cutt.ly/SeVQxBV" }
+                        else if (answer == 'Buzz') {
+                            return "https://cutt.ly/reVWweq" }
+                            else if (answer == 'Fizz') {
+                                return "https://i.imgur.com/Eux6Ewp.jpg"
+                            } else { return "https://cutt.ly/leVWerG" }
+                        }
+                let resultPic = resultPicFunc(result)
+                let textImg = `<img src=${resultPic} height="150" width="180">`
+                let textHtml = `
+                <div class="ui horizontal divider">You got:</div><h2>
+                ${result}!</h2>`
+                displayDiv.innerHTML = textHtml + textImg
             })
         })
     </script>
-    
-    <body>
-        <input type="text" id="value">
-        <input type="submit" value="Check" id="button">
-        <div id="display_answer">
-
-        </div>
-
-    </body>
 
 </html>
+

@@ -35,5 +35,3 @@ Question 9:
 A CDN is a server network that shares the same info as the host server but are spread do different places to make sure that they are accesible and share the download burden and keeps up the download speeds.
 
 
-
-
