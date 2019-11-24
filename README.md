@@ -2,7 +2,7 @@
 
 ***
 
-## Play the game here: https://mantanquzzmo.github.io/fizzbuzz_js_martinstrid/
+#### Play the game here: https://mantanquzzmo.github.io/fizzbuzz_js_martinstrid/
 
 ***
 
